@@ -1,0 +1,12 @@
+tc=int(input())
+fs=[0,1,1,2,3,5,8]
+if tc<=7:
+    print(*fs[:tc])
+    exit()
+cf=1
+ti=5
+for i in range(tc-7):
+    cf=int(str(fs[ti])[::-1])+int(str(fs[ti+1])[::-1])
+    fs.append(cf)
+    ti+=1
+print(*fs)
